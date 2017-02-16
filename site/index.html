@@ -55,13 +55,33 @@
             <div id="links">
             </div>
             <div id="chat">
-                <div id="simple-comments">
-                    <ul>
-                    </ul>
+                <div id="chath" class="row">
+
+                    <hr>
+                    <div class="col-md-12">
+                        <div class="col-md-8">
+                            <h2>Comments</h2>
+                            <div id="comments">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <ul id="messages">
+                        </ul>
+                    </div>
+
                 </div>
-                <div id="talk">
-                    <input type="textfield" id="simple-comment"/>
-                    <button id="simple-send">Post comment</button>
+                <div id="talk" class="form-inline">
+                    <div class="form-group">
+                        <label for="name">Display Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <input type="text" id="comment" class="form-control" placeholder="comment goes here" >
+                    </div>
+                    <button id="addComment" class="btn btn-default">Post comment</button>
                 </div>
             </div>
             <div id="videos">
