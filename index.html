@@ -32,6 +32,10 @@
 <body>
 
 <!-- Build your app here-->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+
+
 <h2><span id="hi">Hi</span> <span id="my-name">World</span></h2>
 
 <button id="change-name" onclick="myFunction()">Try it</button>
@@ -58,6 +62,41 @@
     }
 
 </script>
+
+<button id="learn-more" class="btn btn-danger btn-lg" type="button">Learn More</button>
+
+
+<script>
+
+    $('#learn-more').click( function() {
+        alert( 'Learn more about what?');
+    });
+
+</script>
+
+<div>
+    <input type="textfield" id="simple-comment"/>
+    <button id="simple-send">Post comment</button>
+
+</div>
+
+<div class="col-md-8 col-md-offset-2">
+    <h2>Simple Comments</h2>
+    <div id="simple-comments">
+        <ul>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $("#simple-send").on("click", function(e) {
+        $("#simple-comments ul").append("<li>" + $("#simple-comment").val() + " - " + $("#my-name").text() + "</li>");
+        $("#simple-comment").val("");
+    });
+</script>
+
+
+
 
 </body>
 </html>
