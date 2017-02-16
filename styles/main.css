@@ -198,10 +198,41 @@ main, #messages-card {
 
 .ourTitle {
   text-align: center;
-    font-family: "Comic Sans MS";
+}
+
+.signout{
+    text-align: right;
+}
+
+.welcome{
+    text-align: center;
 }
 
 .page{
     background-color: rebeccapurple;
     color: black;
+    font-family: "Comic Sans MS";
+
+}
+
+.secondary{
+    width: 100%;
+}
+
+.links{
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.chat{
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.video{
+    width:17%;
+    display: inline-block;
+    vertical-align: top;
 }
