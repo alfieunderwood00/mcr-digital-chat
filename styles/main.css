@@ -195,3 +195,13 @@ main, #messages-card {
   top: -1px;
   margin-right: 5px;
 }
+
+.ourTitle {
+  text-align: center;
+    font-family: "Comic Sans MS";
+}
+
+.page{
+    background-color: rebeccapurple;
+    color: black;
+}

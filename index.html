@@ -31,29 +31,46 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class= page>
 
 <!-- Build your app here-->
 
-
-<h2><span id="hi">Hi</span> <span id="my-name">World</span></h2>
-
-<button id="change-name" onclick="myFunction()">Try it</button>
-<button onclick="myColour()"> Change colour</button>
-<button id="learn-more" class="btn btn-danger btn-lg" type="button">Learn More</button>
-
-
-<div>
-    <input type="textfield" id="simple-comment"/>
-    <button id="simple-send">Post comment</button>
-
-</div>
-
-<div class="col-md-8 col-md-offset-2">
-    <h2>Simple Comments</h2>
-    <div id="simple-comments">
-        <ul>
-        </ul>
+<div id="page'">
+    <div id="top">
+        <div id="logo">
+        </div>
+        <div id="title">
+            <h1 class="ourTitle">TITLE</h1>
+        </div>
+        <div id="login">
+            <button id="change-name" onclick="myFunction()">Try it</button>
+            <button onclick="myColour()"> Change colour</button>
+        </div>
+    </div>
+    <div id="main">
+        <div id="hi-name"><h2>
+            <span id="hi">Hi</span> <span id="my-name">World</span></h2>
+        </div>
+        <div id="secondary">
+            <div id="links">
+            </div>
+            <div id="chat">
+                <div id="simple-comments">
+                    <ul>
+                    </ul>
+                </div>
+                <div id="talk">
+                    <input type="textfield" id="simple-comment"/>
+                    <button id="simple-send">Post comment</button>
+                </div>
+            </div>
+            <div id="videos">
+                <div id="video1">
+                    <iframe width="688" height="390"
+                            src="https://www.youtube.com/embed/g3FOQjCgl9w?controls=1"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -88,6 +105,30 @@
             document.getElementById("hi").style.color = colour;
         }
     }
+
+    function addComment(name, comment){
+        var date = new Date();
+
+        var html = '<div class="comment row">' +
+            '<div class="commentator col-xs-7"> ' + name + ' says: </div>' +
+            '<div class="col-xs-12 commentText">' + comment + '</div>' +
+            '<div class="col-xs-12 commentDate">' + date.toLocaleDateString() + '</div>' +
+            '<hr class="col-xs-12" >'+
+            '</div>';
+
+        $(html).hide().appendTo("#comments").fadeIn(400);
+        $("#name").val('');
+        $("#comment").val('');
+        name = '';
+        comment = '';
+    }
+
+    $("#addComment").click(function(){
+        var name = $("#name").val();
+        var comment = $("#comment").val();
+        addComment(name, comment);
+    });
+
 
 </script>
 
